@@ -1,0 +1,37 @@
+// For desktop screen.
+@media screen and (min-width: 1024px)
+	// ------ Nav ------
+	.menu
+		&__logo,
+		&__link
+			height: 100%
+			padding: 0 1em
+		&__logo
+			font-size: calc(0.85em + 0.8vw)
+		&__mobile-menu-btn
+			display: none
+		&__link
+			display: flex
+			width: fit-content
+		// Slide underline of the link.
+		&__link::after
+			content: ""
+			position: absolute
+			bottom: 20%
+			left: 50%
+			width: 70%
+			height: 3px
+			background-color: #000;
+			transition: all .2s ease
+			transform: translateX(-200%)
+			z-index: -1
+		&__link:hover::after
+			transform: translate(-50%, 3px) rotate(-3deg)
+		&__link.active-link:hover::after
+			transform: translate(-50%)
+
+	// ------ Main ------
+	.content-section
+		&__wrapper
+			width: 55%
+			height: 70%
