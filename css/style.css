@@ -38,16 +38,12 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
   position: fixed;
   width: 100%;
   height: 10vh;
@@ -86,6 +82,7 @@ a {
   padding: 0.3em 0.8em;
   border: 2px solid #000a96;
   font-weight: 400;
+  text-transform: lowercase;
   color: #000a96;
 }
 
@@ -93,7 +90,7 @@ a {
   display: none;
   position: relative;
   width: 100%;
-  height: 15%;
+  height: 16%;
   overflow: hidden;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -107,16 +104,6 @@ a {
 
 .menu__link.active-link {
   color: #000;
-}
-
-.menu__link:hover {
-  -webkit-transform: translateY(-3px) rotate(3deg);
-          transform: translateY(-3px) rotate(3deg);
-}
-
-.menu__link.active-link:hover {
-  -webkit-transform: none;
-          transform: none;
 }
 
 .menu__link::before {
@@ -180,9 +167,6 @@ a {
           align-items: center;
   width: 100%;
   height: 100vh;
-}
-
-.content-section:first-of-type {
   padding-top: 10vh;
 }
 
@@ -290,15 +274,15 @@ a {
 }
 
 @media screen and (min-width: 1024px) {
+  .menu__mobile-menu-btn {
+    display: none;
+  }
   .menu__logo, .menu__link {
     height: 100%;
     padding: 0 1em;
   }
   .menu__logo {
     font-size: calc(0.85em + 0.8vw);
-  }
-  .menu__mobile-menu-btn {
-    display: none;
   }
   .menu__link {
     display: -webkit-box;
@@ -308,6 +292,14 @@ a {
     width: -moz-fit-content;
     width: fit-content;
   }
+  .menu__link:hover {
+    -webkit-transform: translateY(-3px) rotate(3deg);
+            transform: translateY(-3px) rotate(3deg);
+  }
+  .menu__link.active-link:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
   .menu__link::after {
     content: "";
     position: absolute;
@@ -315,20 +307,21 @@ a {
     left: 50%;
     width: 70%;
     height: 3px;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0);
     -webkit-transition: all .2s ease;
     transition: all .2s ease;
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     z-index: -1;
   }
   .menu__link:hover::after {
     -webkit-transform: translate(-50%, 3px) rotate(-3deg);
             transform: translate(-50%, 3px) rotate(-3deg);
+    background-color: black;
   }
   .menu__link.active-link:hover::after {
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   .content-section__wrapper {
     width: 55%;
