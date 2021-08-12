@@ -1,3 +1,6 @@
 # Add footer.
 # Do parallax-illusion background animations.
-# Implement expanding sections with more content.
+# Implement expanding sections revealing more content.
+# Change smooth scroll speed.
+# Change navbar color when reaching footer.
+# Populate with content.

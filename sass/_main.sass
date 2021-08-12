@@ -1,8 +1,20 @@
 .main-content
+	position: relative
 	display: flex
 	flex-wrap: wrap
-	background-color: #fff
+	background-color: #fcfcfc
 	z-index: -1
+
+.parallax-bg
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	width: 100%
+	height: 100%
+	background-color: #fcfcfc
+	
 
 .content-section
 	display: flex
@@ -10,64 +22,54 @@
 	align-items: center
 	width: 100%
 	height: 100vh
-	padding-top: $menu-height // Set in '_settings.sass'
+	padding-top: $menu-height // _variables
+	margin-bottom: 50vh
 	&__wrapper
 		display: flex
-		flex-direction: column
-		justify-content: flex-start
-		align-items: center
-		width: 65%
-		height: 75%
+		flex-wrap: wrap
+		justify-content: space-around
+		align-items: space-around
+		width: 80%
+		height: 80%
+		background-color: #fff
+		box-shadow: 0 7px 30px -1px rgba(150,170,180,0.5);
 	&__head
 		text-align: center
-		margin-bottom: 1em
-	&__text-bg
-		display: flex
-		justify-content: center
-		width: 100%
-		height: 100%
-		padding: 2em 1em
-		overflow: hidden
+		width: fit-content
+		height: fit-content
+		transform: rotate(3deg)
 	&__text
-		display: flex
-		justify-content: center
-		width: 85%
-		height: 82%
+		display: block
+		width: fit-content
+		height: fit-content
 		overflow: hidden
+	
+.main-content .content-section:nth-child(odd) .content-section__wrapper
+	transform: rotate(3deg)
 
-// Rotation and color of the section.
-// Set in '_settings.sass'.
-.intro
-	.content-section__wrapper
-		transform: rotate($rotate-section)
-	.content-section__text-bg
-		background-color: $intro-color
-		box-shadow: 13px 13px 15px 1px $intro-shadow-color
+.main-content .content-section:nth-child(even) .content-section__wrapper
+	transform: rotate(-3deg)
+			
 
-.about
-	.content-section__wrapper
-		transform: rotate((-$rotate-section))
-	.content-section__text-bg
-		background-color: $about-color
-		box-shadow: 13px 13px 15px 1px $about-shadow-color
-
-.whatido
-	.content-section__wrapper
-		transform: rotate($rotate-section)
-	.content-section__text-bg
-		background-color: $whatido-color
-		box-shadow: 13px 13px 15px 1px $whatido-shadow-color
-
-.myprojects
-	.content-section__wrapper
-		transform: rotate((-$rotate-section))
-	.content-section__text-bg
-		background-color: $myprojects-color
-		box-shadow: 13px 13px 15px 1px $myprojects-shadow-color
-
-.contact
-	.content-section__wrapper
-		transform: rotate(($rotate-section))
-	.content-section__text-bg
-		background-color: $contact-color
-		box-shadow: 13px 13px 15px 1px $contact-shadow-color
+.end-credits
+	width: 100%
+	background-color: transparent
+	z-index: 2
+	&__wrapper
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		height: 100vh
+		width: 100%
+	&__text
+		text-align: center
+		width: 80%
+	&__img
+		width: 80%
+		height: 70px
+	&__wrapper:nth-child(even) &__text
+		order: 2
+		
+		
+	
