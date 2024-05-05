@@ -1,0 +1,41 @@
+strong
+	font-weight: 900
+
+hr 
+	border: none
+	height: 0.5em
+	width: 80%
+	margin: 50px auto
+	background-image: linear-gradient(to right, rgba(255, 197, 7, 0.1), #ffc507, rgba(255, 197, 7, 0.1))
+	text-align: center
+
+hr:after
+	content: "//"
+	display: inline-block
+	position: relative
+	top: -0.3em
+	font-size: 2em
+	padding: 0 0.25em
+	background: #2B3133
+	font-family: 'Roboto', 'Arial', sans-serif
+
+i
+	color: white
+	text-decoration: none
+	font-size: 2em
+
+.arrow
+	text-align: center
+
+.bounce
+	-moz-animation: bounce 2s infinite
+	-webkit-animation: bounce 2s infinite
+	animation: bounce 2s infinite
+
+@keyframes bounce
+	0%, 20%, 50%, 80%, 100%
+		transform: translateY(0)
+	40%
+		transform: translateY(-30px)
+	60%
+		transform: translateY(-15px)

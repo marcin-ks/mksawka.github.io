@@ -1,44 +1,4 @@
-// For desktop screen.
 @media screen and (min-width: 1024px)
-	// ------ Nav ------
-	.menu
-		&__mobile-menu-btn
-			display: none
-		&__logo,
-		&__link
-			height: 100%
-			padding: 0 1em
-		&__logo
-			font-size: calc(0.85em + 0.8vw)
-		&__link
-			display: flex
-			width: fit-content
-			color: #315DCE
-		&__link:hover
-			transform: translateY(-6px) rotate(3deg)
-			color: #315DCE
-		&__link.active-link:hover
-			transform: none
-		// Show underline of the link.
-		// &__link::after
-		// 	content: ""
-		// 	position: absolute
-		// 	bottom: 20%
-		// 	left: 50%
-		// 	width: 70%
-		// 	height: 3px
-		// 	background-color: rgba(0, 0, 0, 0);
-		// 	transition: all .2s ease
-		// 	transform: translateX(-50%)
-		// 	z-index: -1
-		// &__link:hover::after
-		// 	transform: translate(-50%, 3px) rotate(-3deg)
-		// 	background-color: rgba(0, 0, 0, 1);
-	
-
-
-	// ------ Main ------
-	.content-section
-		&__wrapper
-			width: 70%
-			height: 70%
+	body
+		max-width: 67%
+		margin: 0 auto

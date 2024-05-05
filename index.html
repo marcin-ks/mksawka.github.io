@@ -1,73 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" id="root">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>I'm Marcin K. Sawka</title>
+	<title>Marcin's Homepage</title>
 	<link rel="stylesheet" type="text/css"  href="css/style.css">
+	<script src="https://kit.fontawesome.com/8d2e4a7d82.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<nav class="menu">
-		<a href="#root" class="menu__logo">Marcin K. Sawka</a>
-		<div class="menu__mobile-menu-btn">menu</div>
-		<a href="#myprojects" class="menu__link myprojects">My projects</a>
-		<a href="#whatido" class="menu__link whatido">What I do</a>
-		<a href="#contact" class="menu__link contact">Contact me</a>
-		<a href="#intro" class="menu__link intro">Start</a>
-	</nav>
-	<main class="main-content">
-		<div class="parallax-bg"></div>
-		<section class="content-section intro" id="intro">
-			<article class="content-section__wrapper">
-				<h1 class="content-section__head">Hey there! I'm Marcin!</h1>
-				<p class="content-section__text">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem? Unde obcaecati, eveniet minima officia asperiores debitis reprehenderit magni,similique nihil molestiae quo maiores beatae exercitationem iure eaque! Perspiciatis totam magni illum.
-				</p>
-			</article>
+	<header>
+		<h1>Hello! My name is Marcin.</h1>
+		<h2><strong>I am a self-taught programming enthusiast from <span id="poland">Poland</span>.</strong></h2>
+		<div class="arrow bounce">
+  		<i class="fa-solid fa-down-long"></i>
+		</div>
+	</header>
+	<hr />
+	<main>
+		<section id="aboutme">
+			<h3>Few words about me.</h3>
+			<p>
+			On this subject I am interested in things like: <strong>linux/UNIX, shell scripting, web development, game programming, computer graphics, old technologies, electronics, text-based games, math</strong>.
+	Just to name few.
+			</p>
+			<p>
+			My interests include languages and technologies such as: <strong>JavaScript, WebGL, Bash, CSS, HTML, PHP, BASIC, Perl, C/C++, Python</strong>.
+			</p>
+			<p>
+			Currently I mainly focus on develop my skills in <strong>web development</strong> and <strong>shell scripting.</strong>
+			</p>
 		</section>
-		<section class="content-section myprojects" id="myprojects">
-			<article class="content-section__wrapper">
-				<h1 class="content-section__head">I already did this.</h1>
-				<p class="content-section__text">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem? Unde obcaecati, eveniet minima officia asperiores debitis reprehenderit magni,similique nihil molestiae quo maiores beatae exercitationem iure eaque! Perspiciatis totam magni illum.
-				</p>
-			</article>
+		<hr />
+		<section id="myworks">
+			<h3>This is my code.</h3>
+			<p>
+			Check out my repositories on GitHub.
+			</p>
+			<a href="https://github.com/mksawka" target="_blank"><button role="button">My GitHub profile</button></a>
 		</section>
-		<section class="content-section whatido" id="whatido">
-			<article class="content-section__wrapper">
-				<h1 class="content-section__head">What I do?</h1>
-				<p class="content-section__text">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem? Unde obcaecati, eveniet minima officia asperiores debitis reprehenderit magni,similique nihil molestiae quo maiores beatae exercitationem iure eaque! Perspiciatis totam magni.
-				</p>
-			</article>
-		</section>
-			<section class="content-section contact" id="contact">
-			<article class="content-section__wrapper">
-				<h1 class="content-section__head">Catch up with me.</h1>
-				<p class="content-section__text">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, rem? Unde obcaecati, eveniet minima officia asperiores debitis reprehenderit magni,similique nihil molestiae quo maiores beatae exercitationem iure eaque! Perspiciatis totam magni illum.
-				</p>
-			</article>
-		</section>
-		<section class="end-credits">
-			<article class="end-credits__wrapper">
-				<h3 class="end-credits__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aut nulla quidem?</h3>
-				<img class="end-credits__img" src="/img/design.svg"></img>
-			</article>
-			<article class="end-credits__wrapper">
-				<h3 class="end-credits__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aliquam minus quia.</h3>
-				<img class="end-credits__img" src="/img/monit.svg"></img>
-			</article>
-			<article class="end-credits__wrapper">
-				<h3 class="end-credits__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus ipsam dolore numquam!</h3>
-				<img class="end-credits__img" src="/img/programm.svg"></img>
-			</article>
+		<hr />
+		<section id="contact">
+			<h3>Contact with me.</h3>
+			<p>
+			Feel free to contact me via e-mail: marcin.k.sawka@gmail.com
+			</p>
+			<a href="mailto:marcin.k.sawka@gmail.com"><button role="button">Send an e-mail</button></a>
 		</section>
 	</main>
-	<footer class="footer">
-		<h2>Check out my github and codepen if you haven't yet.</h2>
+	<hr />
+	<footer>
+		<p>Created by <strong>Marcin Sawka</strong> &copy; 2024</p>
 	</footer>
-	<script src="js/index.js" type="module"></script>
 </body>
 </html>
